@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  lab:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./notebooks:/notebooks/notebooks
+      - ./data:/notebooks/data
+    ports:
+      - "8888:8888"
